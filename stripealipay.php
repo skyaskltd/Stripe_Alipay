@@ -95,7 +95,7 @@ function stripealipay_link($params){
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => $YOUR_DOMAIN .'/modules/gateways/stripealipaycallpay/alipay_callback.php?session_id= {CHECKOUT_SESSION_ID} ', 
+            'success_url' => $YOUR_DOMAIN .'/modules/gateways/stripealipaycallback/alipay_callback.php?session_id={CHECKOUT_SESSION_ID} ', 
             'cancel_url' => $YOUR_DOMAIN .'/viewinvoice.php?id='. $params['invoiceid'] .'',
             'automatic_tax' => [
                 'enabled' => true,
