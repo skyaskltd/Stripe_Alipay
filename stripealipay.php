@@ -5,7 +5,7 @@ use Stripe\Price;
 if (!defined("WHMCS")) {
     die("This file cannot be accessed directly");
 }
-require_once(__DIR__ . '/stripeaplipaycallback/vendor/autoload.php');
+//require_once(__DIR__ . '/stripeaplipaycallback/vendor/autoload.php');
 function stripealipay_config() {
     return array(
         'FriendlyName' => array(
@@ -16,7 +16,7 @@ function stripealipay_config() {
             'FriendlyName' => 'WebsiteDomin',
             'Type' => 'text',
             'Size' => 30,
-            'Description' => '填写您的网站域名，例如：https://你的whmcs站点域名/',
+            'Description' => '填写您的网站域名，例如：https://你的whmcs站点域名',
         ),
         'Fixedfee' => array(
             'FriendlyName' => 'Fixedfee',
@@ -95,7 +95,7 @@ function stripealipay_link($params){
                 'quantity' => 1,
             ]],
             'mode' => 'payment',
-            'success_url' => $YOUR_DOMAIN .'/modules/gateways/stripealipaycallpay/alipay_callback.php?session_id= {CHECKOUT_SESSION_ID} '', 
+            'success_url' => $YOUR_DOMAIN .'/modules/gateways/stripealipaycallpay/alipay_callback.php?session_id= {CHECKOUT_SESSION_ID} ', 
             'cancel_url' => $YOUR_DOMAIN .'/viewinvoice.php?id='. $params['invoiceid'] .'',
             'automatic_tax' => [
                 'enabled' => true,
