@@ -13,7 +13,7 @@ whmcs的`stripe alipay`接入解决方案，使用了`stripe checkout`控件
 
 在Stripe的Webhook设置中，添加以下URL作为Endpoint：
 ```
-https://your-whmcs-domain.com/stripealipaycallback/alipay_callback.php
+https://your-whmcs-domain.com/modules/gateways/stripealipaycallback/alipay_callback.php
 ```
 
 确保选择以下事件类型：
